@@ -36,3 +36,16 @@ body {
 a {
   color: white;
 }
+body,
+html {
+  height: 100%;
+}
+/* The hero image */
+.hero-image {
+  background-image: url("/assets/images/golfclubs.jpg");
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
