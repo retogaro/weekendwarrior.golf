@@ -49,3 +49,11 @@ html {
   background-size: cover;
   position: relative;
 }
+
+section#logo {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
