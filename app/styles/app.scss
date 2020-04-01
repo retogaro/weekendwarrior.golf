@@ -50,10 +50,40 @@ html {
   position: relative;
 }
 
+section#products {
+  background-colour: #222;
+  color: white;
+}
+
+section#contact {
+  background-colour: #333;
+  color: white;
+}
+
+section#products {
+  background-colour: white;
+  color: grey;
+}
+
 section#logo {
   position: absolute;
   z-index: 1;
   display: flex;
   width: 100vw;
   justify-content: center;
+}
+
+section#contact {
+  background-colour: #333;
+  p {
+    color: white;
+    font-size: 20px;
+  }
+  a {
+    color: white;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
