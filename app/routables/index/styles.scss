@@ -1,12 +1,31 @@
-#homepage.page {
+main#homepage.page {
   section#hero {
-    //
+    background: #252525;
+  }
+
+  section#hero {
+    background-image: url("/assets/images/golfclubs.jpg");
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  section#logo {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
   }
 
   section#products {
+    background-color: #1c1c1c;
     div {
       ul.column {
         li.product {
+          background-color: #252525;
           h1 {
             //
           }
@@ -25,9 +44,10 @@
   }
 
   section#contact {
-    background: red;
+    background: #252525;
     div {
-      background: yellow;
+      text-align: center;
+      margin: 25px;
       p {
         color: white;
         font-size: 20px;
@@ -40,7 +60,32 @@
   }
 
   section#founders {
-    //
+    h2 {
+      color: #252525;
+      text-align: center;
+    }
+    ul {
+      display: flex;
+      background-color: white;
+      li {
+        flex: 1;
+        margin: 25px;
+        text-align: center;
+        img {
+          width: 100%;
+          height: auto;
+        }
+        h3 {
+          color: #252525;
+        }
+        h4 {
+          color: #252525;
+        }
+        p {
+          color: #252525;
+        }
+      }
+    }
   }
 }
 
