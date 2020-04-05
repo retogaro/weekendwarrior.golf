@@ -24,15 +24,21 @@ main#homepage.page {
     background-color: #1c1c1c;
     display: flex;
     justify-content: center;
+    padding-top: 90px;
+    padding-bottom: 90px;
     .columns {
       display: flex;
-      background-color: red;
       width: 1120px;
+      justify-content: space-between;
       ul.column {
-        flex: 1;
+        width: 346px;
         li.product {
           background-color: #272727;
-          width: 346px;
+          margin-bottom: 40px;
+          padding: 30px;
+          p {
+            color: white;
+          }
         }
       }
     }
