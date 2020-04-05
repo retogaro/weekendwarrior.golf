@@ -47,6 +47,7 @@ main#homepage.page {
 
   section#contact {
     background: #252525;
+    padding: 60px;
     div {
       text-align: center;
       margin: 25px;
@@ -55,37 +56,36 @@ main#homepage.page {
         font-size: 20px;
         line-height: 150%;
         a {
-          color: orange;
+          color: white;
         }
       }
     }
   }
 
   section#founders {
-    h2 {
-      color: #252525;
+  }
+  ul {
+    display: flex;
+    background-color: white;
+    padding: 25px;
+    li {
+      flex: 1;
+      margin: 25px;
       text-align: center;
-    }
-    ul {
-      display: flex;
-      background-color: white;
-      li {
-        flex: 1;
-        margin: 25px;
-        text-align: center;
-        img {
-          width: 100%;
-          height: auto;
-        }
-        h3 {
-          color: #252525;
-        }
-        h4 {
-          color: #252525;
-        }
-        p {
-          color: #252525;
-        }
+      img {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+      }
+      h3 {
+        color: #252525;
+        padding: 10px;
+      }
+      h4 {
+        color: #252525;
+      }
+      p {
+        color: #252525;
       }
     }
   }
