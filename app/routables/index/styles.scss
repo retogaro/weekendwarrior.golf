@@ -33,80 +33,84 @@ main#homepage.page {
       ul.column {
         width: 346px;
         li.product {
-          background-color: #272727;
-          margin-bottom: 40px;
-          padding: 30px;
-          p {
-            color: white;
+          .image {
+            position: relative;
+            img {
+              width: 100%;
+              height: auto;
+            }
+            p {
+              position: absolute;
+              background: orange;
+              bottom: 10px;
+              right: 10px;
+            }
+          }
+          .text {
+            padding: 40px;
+            position: relative;
+            background-color: #272727;
+            margin-bottom: 40px;
+            h2 {
+              color: white;
+              small {
+              }
+            }
+            p {
+              color: white;
+            }
           }
         }
       }
     }
   }
-  //  #columns {
-  //  display: flex;
-  //flex-wrap: wrap;
-  //  }
-  //  ul {
-  //  background-color: blue;
-  //li {
-  //h3 {
-  //}
-  //p {
-  //
-  //}
-  //img {
-  //
-  //}
-  //}
-  //}
-  //}
+}
 
-  section#contact {
-    background: #252525;
-    padding: 60px;
-    div {
-      text-align: center;
-      margin: 25px;
-      p {
+section#contact {
+  background: #252525;
+  padding: 60px;
+  div {
+    text-align: center;
+    margin: 25px;
+    p {
+      color: white;
+      font-size: 20px;
+      line-height: 150%;
+      a {
         color: white;
-        font-size: 20px;
-        line-height: 150%;
-        a {
-          color: white;
-        }
-      }
-    }
-  }
-
-  section#founders {
-    ul {
-      display: flex;
-      background-color: white;
-      padding: 25px;
-      li {
-        flex: 1;
-        margin: 25px;
-        text-align: center;
-        img {
-          width: 100%;
-          height: auto;
-          padding: 20px;
-        }
-        h3 {
-          color: #252525;
-          padding: 10px;
-        }
-        h4 {
-          color: #252525;
-        }
-        p {
-          color: #252525;
-        }
       }
     }
   }
 }
+
+section#founders {
+  ul {
+    display: flex;
+    background-color: white;
+    padding: 25px;
+    li {
+      flex: 1;
+      margin: 25px;
+      text-align: center;
+      img {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+      }
+      h3 {
+        color: #252525;
+        padding: 10px;
+      }
+      h4 {
+        color: #252525;
+      }
+      p {
+        color: #252525;
+      }
+    }
+  }
+}
+
 // /* The hero image */
 // section#hero {
 //   background-image: url("/assets/images/golfclubs.jpg");
