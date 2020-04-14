@@ -1,0 +1,15 @@
+<main
+  id="products"
+  class="page"
+>
+  <section id="list">
+    <div>
+      <h1>Product Page</h1>
+      {{#each @model.products as |product|}}
+        <p>Name: {{product.name}}</p>
+        <p>Price: {{product.price}}</p>
+        <hr>
+      {{/each}}
+    </div>
+  </section>
+</main>
