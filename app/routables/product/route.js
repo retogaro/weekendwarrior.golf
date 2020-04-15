@@ -1,32 +1,33 @@
 import Route from "@ember/routing/route";
 
 export default class ProductRoute extends Route {
-  beforeModel() {
-    console.log("beforeModel()");
-  }
-
   model() {
-    console.log("model()");
+    // Array
+    // const arr = ['apple', 'pear', 'lemons'];
 
+    // Object
+    // const obj = {
+    //   firstName: 'Jan',
+    //   lastName: 'Werkhoven',
+    //   age: 33
+    // }
+
+    // Javascript
+    // JSON
     return {
-      products: [
-        {
-          name: "Apple",
-          price: 200
-        },
-        {
-          name: "Pear",
-          price: 100
-        },
-        {
-          name: "Lemons",
-          price: 150
-        }
-      ]
+      product: {
+        brand: "aaa",
+        model: "bbb",
+        length: "ccc",
+        shaft: "ddd",
+        condition: "eee",
+        description: "eee",
+        image: "eee.jpg",
+        price: 300
+      }
     };
-  }
 
-  afterModel() {
-    console.log("afterModel()");
+    // TODO
+    // return this.store.findAll('product');
   }
 }
