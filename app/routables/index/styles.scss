@@ -23,14 +23,15 @@ main#homepage.page {
   section#products {
     background-color: #1c1c1c;
     display: flex;
-    padding: 70px 45px;
+    padding: 70px 40px;
     ul.column {
       display: flex;
       flex-flow: wrap;
+      justify-content: center;
       width: 1440px;
       li.product {
         max-width: 346px;
-        padding: 0px 50px;
+        padding: 0px 20px;
         .image {
           position: relative;
           img {
