@@ -23,9 +23,7 @@ main#homepage.page {
   section#products {
     background-color: #1c1c1c;
     display: flex;
-    padding-top: 90px;
-    padding-bottom: 90px;
-    padding-left: 45px;
+    padding: 70px 45px;
     ul.column {
       display: flex;
       flex-flow: wrap;
