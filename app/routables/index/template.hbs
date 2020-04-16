@@ -17,45 +17,41 @@
   </section>
 
   <section id="products">
-    <div class="columns">
-      <ul class="column">
-
-        {{#each @model.products as |product|}}
-          <li class="product">
-            <div class="image">
-              <img src={{product.image}}>
-              {{#if product.sold}}
-                <p>SOLD</p>
-              {{else}}
-                <p>${{product.price}}</p>
-              {{/if}}
-            </div>
-            <div class="text">
-              <h4>{{product.brand}}<small>{{product.model}}</small></h4>
-              <dl>
-                <dt>Condition:</dt>
-                <dd>{{product.condition}}</dd>
-                <dt>Shaft:</dt>
-                <dd>{{product.shaft}}</dd>
-                <dt>Length:</dt>
-                <dd>{{product.length}}</dd>
-                <dt>Club Range:</dt>
-                <dd>{{product.clubrange}}</dd>
-              </dl>
-              <p>{{product.description}}
-              </p>
-              <p>
-                <LinkTo
-                  @route="product"
-                  @model={{@model.slug}}
-                >Read more</LinkTo>
-              </p>
-            </div>
-          </li>
-        {{/each}}
-
-      </ul>
-    </div>
+    <ul class="column">
+      {{#each @model.products as |product|}}
+        <li class="product">
+          <div class="image">
+            <img src={{product.image}}>
+            {{#if product.sold}}
+              <p>SOLD</p>
+            {{else}}
+              <p>${{product.price}}</p>
+            {{/if}}
+          </div>
+          <div class="text">
+            <h4>{{product.brand}}<small>{{product.model}}</small></h4>
+            <dl>
+              <dt>Condition:</dt>
+              <dd>{{product.condition}}</dd>
+              <dt>Shaft:</dt>
+              <dd>{{product.shaft}}</dd>
+              <dt>Length:</dt>
+              <dd>{{product.length}}</dd>
+              <dt>Club Range:</dt>
+              <dd>{{product.clubrange}}</dd>
+            </dl>
+            <p>{{product.description}}
+            </p>
+            <p>
+              <LinkTo
+                @route="product"
+                @model={{@model.slug}}
+              >Read more</LinkTo>
+            </p>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
   </section>
 
 

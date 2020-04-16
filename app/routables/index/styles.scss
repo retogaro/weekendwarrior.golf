@@ -23,77 +23,76 @@ main#homepage.page {
   section#products {
     background-color: #1c1c1c;
     display: flex;
-    justify-content: center;
     padding-top: 90px;
     padding-bottom: 90px;
-    .columns {
+    padding-left: 45px;
+    ul.column {
       display: flex;
-      width: 1120px;
-      justify-content: space-between;
-      ul.column {
-        width: 346px;
-        li.product {
-          .image {
-            position: relative;
-            img {
-              width: 100%;
-              height: auto;
-            }
-            // price tag
-            p {
-              font-family: $bold;
-              position: absolute;
-              background: #ffdb5b;
-              color: #353535;
-              top: 20px;
-              right: 20px;
-              padding: 10px 16px;
-              font-size: 22px;
-              margin: 0;
+      flex-flow: wrap;
+      width: 1440px;
+      li.product {
+        max-width: 346px;
+        padding: 0px 50px;
+        .image {
+          position: relative;
+          img {
+            width: 100%;
+            height: auto;
+          }
+          // price tag
+          p {
+            font-family: $bold;
+            position: absolute;
+            background: #ffdb5b;
+            color: #353535;
+            top: 20px;
+            right: 20px;
+            padding: 10px 16px;
+            font-size: 22px;
+            margin: 0;
+          }
+        }
+        .text {
+          padding: 28px;
+          position: relative;
+          background-color: #272727;
+          margin-bottom: 40px;
+          h4 {
+            font-family: $bold;
+            font-size: 30px;
+            color: white;
+            small {
+              font-family: $light;
+              font-size: 24px;
+              margin-left: 10px;
             }
           }
-          .text {
-            padding: 28px;
-            position: relative;
-            background-color: #272727;
-            margin-bottom: 40px;
-            h4 {
-              font-family: $bold;
-              font-size: 30px;
-              color: white;
-              small {
-                font-family: $light;
-                font-size: 24px;
-                margin-left: 10px;
-              }
+          p,
+          dt,
+          dd {
+            color: white;
+            line-height: 180%;
+            font-size: 16px;
+          }
+          dl {
+            margin: 22px 0;
+            display: flex;
+            flex-flow: wrap;
+            dt {
+              width: 40%;
             }
-            p,
-            dt,
             dd {
+              width: 60%;
+              margin: 0; // to overide the browser default.
+            }
+          }
+          p {
+            a {
               color: white;
-              line-height: 180%;
-              font-size: 16px;
-            }
-            dl {
-              margin: 22px 0;
-              display: flex;
-              flex-flow: wrap;
-              dt {
-                width: 40%;
-              }
-              dd {
-                width: 60%;
-                margin: 0; // to overide the browser default.
-              }
-            }
-            p {
-              a {
-                color: white;
-                text-decoration: underline;
-                &:hover {
-                  text-decoration: none;
-                  color: #ffdb5b;
-                }
+              text-decoration: underline;
+              &:hover {
+                text-decoration: none;
+                color: #ffdb5b;
               }
             }
           }
