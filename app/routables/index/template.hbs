@@ -2,17 +2,20 @@
   id="homepage"
   class="page"
 >
-
-  <section id="hero">
-    <div class="header">
-      <ul class="navbar">
-        <li><a href="/">Weekend Warrior</a></li>
-        <li><a href="About">About</a></li>
-        <li><a href="Products">Products</a></li>
-        <li><a href="Contact">Contact</a></li>
-      </ul>
-    </div>
+  <section id="nav">
+    <nav>
+      <div class="left">
+        <LinkTo @route="index">Weekend Warrior</LinkTo>
+      </div>
+      <div class="right">
+        <LinkTo @route="about">About</LinkTo>
+        <LinkTo @route="products">Products</LinkTo>
+        <LinkTo @route="contact">Contact</LinkTo>
+      </div>
+    </nav>
   </section>
+
+  <section id="hero"></section>
 
   <section id="products">
     <ul class="column">

@@ -7,33 +7,19 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
-  // homepage
+  // weekendwarrior.golf/
   // this.route('index');
-  // slug = the dynamic part of the URL
-  // weekendwarrior.golf/product/Mizuno-MP33
-  // weekendwarrior.golf/product/Tourstage-Ts201
-  this.route("product", { path: "/product/:slug" });
-  // weekendwarrior.golf/about-us
-  // about
-  // about.index
-  // this.route("about", { path: "about-us" });
+
+  // weekendwarrior.golf/about
+  this.route("about");
+
+  // weekendwarrior.golf/products
+  this.route("products", function() {
+    // weekendwarrior.golf/products/Mizuno-MP33
+    // weekendwarrior.golf/products/Tourstage-Ts201
+    this.route("product", { path: "/:product_slug" });
+  });
+
   // weekendwarrior.golf/contact
-  // contact
-  // contact.index
-  // this.route("contact");
-  // interflux.com
-  // interflux.com/products
-  // interflux.com/soldering-fluxes
-  // interflux.com/soldering-fluxes/IF-2005M
-  //
-  // interflux.com/products/:family/:product
-  // interflux.com/products/soldering-fluxes/IF-2005M
-  // interflux.com/products/solder-pastes/DP-5600
-  // products.family.product
-  //
-  // this.route("products", function() {
-  //   this.route("brand", { path: "/:brand" }, function() {
-  //     this.route("product", { path: "/:product" });
-  //   });
-  // });
+  this.route("contact");
 });
