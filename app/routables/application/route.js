@@ -5,6 +5,8 @@ export default class ApplicationRoute extends Route {
   @service store; // Ember data store
 
   model() {
+    console.log("hit application route");
+
     this.store.pushPayload({
       data: [
         {

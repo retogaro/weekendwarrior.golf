@@ -24,6 +24,10 @@ export default class ProductModel extends Model {
   @attr("string") length;
   @attr("string") shaft;
   @attr("string") condition;
+  @attr("string") description;
+  @attr("string") image;
   @attr("number") price;
   @attr("boolean") sold;
+  @attr("string") clubrange;
+  @attr("string") slug;
 }
