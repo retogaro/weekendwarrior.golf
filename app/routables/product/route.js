@@ -1,33 +1,17 @@
 import Route from "@ember/routing/route";
+import { inject as service } from "@ember/service";
 
 export default class ProductRoute extends Route {
+  @service store;
+
   model() {
-    // Array
-    // const arr = ['apple', 'pear', 'lemons'];
+    return this.store.peekRecord("product", "Titleist-DCI962");
+  }
 
-    // Object
-    // const obj = {
-    //   firstName: 'Jan',
-    //   lastName: 'Werkhoven',
-    //   age: 33
-    // }
-
-    // Javascript
-    // JSON
-    return {
-      product: {
-        brand: "aaa",
-        model: "bbb",
-        length: "ccc",
-        shaft: "ddd",
-        condition: "eee",
-        description: "eee",
-        image: "eee.jpg",
-        price: 300
-      }
-    };
-
-    // TODO
-    // return this.store.findAll('product');
+  renderTemplate() {
+    this.render({
+      into: "index",
+      outlet: "modal"
+    });
   }
 }

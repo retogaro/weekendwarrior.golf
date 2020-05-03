@@ -1,13 +1,7 @@
 import Route from "@ember/routing/route";
 
-// CSS, HTML: kebab-case
-// JS: camelCase
-// Ruby: snake_case
-
 export default class IndexRoute extends Route {
   model() {
-    console.log("hit index route");
-
     return {
       products: this.store.peekAll("product")
     };

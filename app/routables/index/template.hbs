@@ -9,7 +9,6 @@
       </div>
       <div class="right">
         <LinkTo @route="about">About</LinkTo>
-        <LinkTo @route="products">Products</LinkTo>
         <LinkTo @route="contact">Contact</LinkTo>
       </div>
     </nav>
@@ -45,8 +44,8 @@
             </p>
             <p>
               <LinkTo
-                @route="product"
-                @model={{@model.slug}}
+                @route="index"
+                @query={{hash modal=product.slug}}
               >Read more</LinkTo>
             </p>
           </div>
@@ -58,9 +57,11 @@
 
   <section id="contact">
     <div>
-      <p>To order, click the clubs above.<br />For all other questions, just ask:</p>
+      <p>To order, click the clubs above.<br />For all other questions, just
+        ask:</p>
       <p>
-        <a href="mailto:sendit@weekendwarrior.golf"><strong>sendit@weekendwarrior.golf</strong></a>
+        <a
+          href="mailto:sendit@weekendwarrior.golf"><strong>sendit@weekendwarrior.golf</strong></a>
       </p>
       <p>Or find us on: Instagram, Facebook and Ebay</p>
     </div>
@@ -95,7 +96,8 @@
               height="300"
             >
             <p>Absolutely hopeless with the driver, however dreams of having
-              better short game than phil mickelson. Love hate relationship. Hate
+              better short game than phil mickelson. Love hate relationship.
+              Hate
               the player not the game.</p>
           </li>
           <li>
@@ -109,7 +111,8 @@
             >
             <p>The only person here with a single digit handicap and
               belongs to a proper golf club. All he does all day long is send
-              meaningless gifs to annoy all his golf mates. Also he once threw his
+              meaningless gifs to annoy all his golf mates. Also he once threw
+              his
               3 wood further than his golf shot.</p>
           </li>
         </ul>
@@ -117,3 +120,7 @@
     </div>
   </section>
 </main>
+
+{{#if this.modal}}
+  <Modal @product={{this.product}} />
+{{/if}}

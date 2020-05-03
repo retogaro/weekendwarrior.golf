@@ -1,0 +1,17 @@
+<div id="modal">
+  <div
+    id="overlay"
+    {{on 'click' this.close}}
+  >
+  </div>
+  <div id="box">
+    <p>TEST {{@product.brand}} - {{@product.model}}</p>
+  </div>
+</div>
+
+<!-- <LinkTo
+  @route="index"
+  @query={{hash modal=null}}
+>
+  Back
+</LinkTo> -->
