@@ -34,11 +34,24 @@ main#homepage.page {
   section#hero {
     background-color: #252525;
     background-image: url("/assets/images/jc-bag.jpg");
-    height: 95vh;
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    @include widescreen {
+      // height: px(31vw);
+    }
+    @include desktop {
+      height: 31vw;
+    }
+    @include tablet {
+      height: 80vw;
+    }
+    @include mobile {
+      height: 130vw;
+      background-position: 29% 44%;
+    }
   }
 
   section#products {
