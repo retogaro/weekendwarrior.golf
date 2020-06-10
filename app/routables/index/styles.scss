@@ -40,7 +40,7 @@ main#homepage.page {
     background-size: cover;
     position: relative;
     @include widescreen {
-      // height: px(31vw);
+      height: px(31vw);
     }
     @include desktop {
       height: 31vw;
