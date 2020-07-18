@@ -1,168 +1,308 @@
-main#homepage.page {
-  section#nav {
-    height: 0;
-    nav {
+#homepage {
+  #hero {
+    background-image: url("/assets/images/weekend-warrior-hero.jpg");
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position-x: 80%;
+    h1 {
       position: absolute;
-      background-color: #1c1c1c;
-      opacity: 0.9;
+      bottom: 0;
+      text-align: right;
+      width: 92%;
+      padding: 57px;
+      z-index: 1;
+    }
+    #menu-wrap {
+      postion: fixed;
+      top: 20px;
+      right: 80px;
+      .toggler:checked ~ .menu {
+        visibility: visible;
+        .one {
+          transform: scale(1);
+          .two {
+            opacity: 1;
+            transition: opacity 0.4s ease;
+          }
+        }
+      }
+      .toggler {
+        position: absolute;
+        top: 35px;
+        right: 95px;
+        z-index: 2;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+      }
+      .toggler:checked + .hamburger {
+        div {
+          transform: rotate(135deg);
+        }
+        div::before,
+        div::after {
+          top: 0;
+          transform: rotate(90deg);
+        }
+        .toggler:checked ~ .menu {
+          visibility: visible;
+          div {
+            transform: scale(1);
+            transition-duration: 0.8s;
+          }
+        }
+      }
+      .menu {
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .one {
+        background: #040009;
+        border-radius: 50%;
+        width: 200vw;
+        height: 200vw;
+        display: flex;
+        flex: none;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0);
+        transition: all 0.4s ease;
+      }
+      .two {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      ul {
+        li {
+          list-style: none;
+          color: black;
+          font-size: 45px;
+          padding: 40px;
+
+          a {
+            text-decoration: none;
+            transition: color 0.4s ease;
+            color: #fff;
+          }
+        }
+      }
+    }
+    .hamburger {
+      position: absolute;
+      top: 20px;
+      right: 80px;
+      z-index: 1;
+      width: 60px;
+      height: 60px;
+      padding: 10px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 0px 60px;
-      z-index: 1;
-      width: 100%;
-      box-sizing: border-box;
-      .left,
-      .right {
-        display: flex;
-      }
-      .left {
-        a {
-          font-family: $regulargirassol;
-          font-size: 30px;
-        }
-      }
-      a {
-        color: white;
-        padding: 30px;
-        font-size: 18px;
-        line-height: 100%;
-      }
-    }
-  }
-
-  section#hero {
-    background-color: #252525;
-    background-image: url("/assets/images/jc-bag.jpg");
-    height: 95vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-  }
-
-  section#products {
-    background-color: #1c1c1c;
-    display: flex;
-    padding: 70px 40px;
-    ul.column {
-      display: flex;
-      flex-flow: wrap;
       justify-content: center;
-      width: 1440px;
-      li.product {
-        max-width: 346px;
-        padding: 0px 20px;
-        .image {
-          position: relative;
-          img {
-            width: 100%;
-            height: auto;
-          }
-          // price tag
-          p {
-            font-family: $bold;
-            position: absolute;
-            background: #ffdb5b;
-            color: #353535;
-            top: 20px;
-            right: 20px;
-            padding: 10px 16px;
-            font-size: 22px;
-            margin: 0;
-          }
-        }
-        .text {
-          padding: 28px;
-          position: relative;
-          background-color: #272727;
-          margin-bottom: 40px;
-          h4 {
-            font-family: $bold;
-            font-size: 30px;
-            color: white;
-            small {
-              font-family: $light;
-              font-size: 24px;
-              margin-left: 10px;
-            }
-          }
-          p,
-          dt,
-          dd {
-            color: white;
-            line-height: 180%;
-            font-size: 16px;
-          }
-          dl {
-            margin: 22px 0;
-            display: flex;
-            flex-flow: wrap;
-            dt {
-              width: 40%;
-            }
-            dd {
-              width: 60%;
-              margin: 0; // to overide the browser default.
-            }
-          }
-          p {
-            a {
-              color: white;
-              text-decoration: underline;
-              &:hover {
-                text-decoration: none;
-                color: #ffdb5b;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-section#contact {
-  background: #252525;
-  padding: 60px;
-  div {
-    text-align: center;
-    margin: 25px;
-    p {
-      color: white;
-      font-size: 20px;
-      line-height: 150%;
-      a {
-        color: white;
-      }
-    }
-  }
-}
-
-section#founders {
-  ul {
-    display: flex;
-    background-color: white;
-    padding: 25px;
-    li {
-      flex: 1;
-      margin: 25px;
-      text-align: center;
-      img {
+      > div {
+        position: relative;
         width: 100%;
-        height: auto;
-        padding: 20px;
+        height: 2px;
+        background-color: #fff;
+        display: flex;
+        align-item: center;
+        justify-content: center;
+        transition: all 0.4s ease;
       }
-      h3 {
-        color: #252525;
-        padding: 10px;
+      > div::before,
+      ::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: -10px;
+        width: 100%;
+        height: 2px;
+        background: white;
       }
-      h4 {
-        color: #252525;
-      }
-      p {
-        color: #252525;
+      > div::after {
+        top: 10px;
       }
     }
   }
 }
+
+// main#homepage.page {
+//   section#nav {
+//     height: 0;
+//     nav {
+//       position: absolute;
+//       background-color: #1c1c1c;
+//       opacity: 0.9;
+//       display: flex;
+//       align-items: center;
+//       justify-content: space-between;
+//       padding: 0px 60px;
+//       z-index: 1;
+//       width: 100%;
+//       box-sizing: border-box;
+//       .left,
+//       .right {
+//         display: flex;
+//       }
+//       .left {
+//         a {
+//           font-family: $regulargirassol;
+//           font-size: 30px;
+//         }
+//       }
+//       a {
+//         color: white;
+//         padding: 30px;
+//         font-size: 18px;
+//         line-height: 100%;
+//       }
+//     }
+//   }
+//
+//   section#hero {
+//     background-color: #252525;
+//     background-image: url("/assets/images/jc-bag.jpg");
+//     height: 95vh;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     position: relative;
+//   }
+//
+//   section#products {
+//     background-color: #1c1c1c;
+//     display: flex;
+//     padding: 70px 40px;
+//     ul.column {
+//       display: flex;
+//       flex-flow: wrap;
+//       justify-content: center;
+//       width: 1440px;
+//       li.product {
+//         max-width: 346px;
+//         padding: 0px 20px;
+//         .image {
+//           position: relative;
+//           img {
+//             width: 100%;
+//             height: auto;
+//           }
+//           // price tag
+//           p {
+//             font-family: $bold;
+//             position: absolute;
+//             background: #ffdb5b;
+//             color: #353535;
+//             top: 20px;
+//             right: 20px;
+//             padding: 10px 16px;
+//             font-size: 22px;
+//             margin: 0;
+//           }
+//         }
+//         .text {
+//           padding: 28px;
+//           position: relative;
+//           background-color: #272727;
+//           margin-bottom: 40px;
+//           h4 {
+//             font-family: $bold;
+//             font-size: 30px;
+//             color: white;
+//             small {
+//               font-family: $light;
+//               font-size: 24px;
+//               margin-left: 10px;
+//             }
+//           }
+//           p,
+//           dt,
+//           dd {
+//             color: white;
+//             line-height: 180%;
+//             font-size: 16px;
+//           }
+//           dl {
+//             margin: 22px 0;
+//             display: flex;
+//             flex-flow: wrap;
+//             dt {
+//               width: 40%;
+//             }
+//             dd {
+//               width: 60%;
+//               margin: 0; // to overide the browser default.
+//             }
+//           }
+//           p {
+//             a {
+//               color: white;
+//               text-decoration: underline;
+//               &:hover {
+//                 text-decoration: none;
+//                 color: #ffdb5b;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+//
+// section#contact {
+//   background: #252525;
+//   padding: 60px;
+//   div {
+//     text-align: center;
+//     margin: 25px;
+//     p {
+//       color: white;
+//       font-size: 20px;
+//       line-height: 150%;
+//       a {
+//         color: white;
+//       }
+//     }
+//   }
+// }
+//
+// section#founders {
+//   ul {
+//     display: flex;
+//     background-color: white;
+//     padding: 25px;
+//     li {
+//       flex: 1;
+//       margin: 25px;
+//       text-align: center;
+//       img {
+//         width: 100%;
+//         height: auto;
+//         padding: 20px;
+//       }
+//       h3 {
+//         color: #252525;
+//         padding: 10px;
+//       }
+//       h4 {
+//         color: #252525;
+//       }
+//       p {
+//         color: #252525;
+//       }
+//     }
+//   }
+// }
