@@ -11,6 +11,8 @@
       text-align: right;
       width: 92%;
       padding: 57px;
+      font-size: 28px;
+      font-family: $bold;
     }
     #menu-wrap {
       postion: fixed;
@@ -90,7 +92,7 @@
           color: black;
           font-size: 45px;
           padding: 40px;
-
+          font-family: $regular;
           a {
             text-decoration: none;
             transition: color 0.4s ease;
