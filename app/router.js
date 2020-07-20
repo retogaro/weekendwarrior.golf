@@ -14,11 +14,14 @@ Router.map(function() {
   this.route("about");
 
   // weekendwarrior.golf/products
-  this.route("products", function() {
-    // weekendwarrior.golf/products/Mizuno-MP33
-    // weekendwarrior.golf/products/Tourstage-Ts201
-    this.route("product", { path: "/:product_slug" });
-  });
+  // this.route("products", function() {
+  //   // weekendwarrior.golf/products/Mizuno-MP33
+  //   // weekendwarrior.golf/products/Tourstage-Ts201
+  //   this.route("product", { path: "/:product_slug" });
+  // });
+
+  // /product/Tourstage-TS-201
+  this.route("product", { path: "/product/:product_slug" });
 
   // weekendwarrior.golf/contact
   this.route("contact");
