@@ -15,7 +15,7 @@
       font-family: $bold;
     }
     #menu-wrap {
-      postion: fixed;
+      position: fixed;
       top: 20px;
       right: 80px;
       .toggler:checked ~ .menu {
@@ -29,9 +29,9 @@
         }
       }
       .toggler {
-        position: absolute;
+        position: fixed;
         top: 35px;
-        right: 90px;
+        right: 55px;
         z-index: 2;
         cursor: pointer;
         width: 50px;
@@ -102,9 +102,9 @@
       }
     }
     .hamburger {
-      position: absolute;
+      position: fixed;
       top: 20px;
-      right: 80px;
+      right: 45px;
       z-index: 1;
       width: 50px;
       height: 60px;
